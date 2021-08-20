@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\lib\bootstrap\dist\**" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\**" />
+    <EmbeddedResource Remove="wwwroot\lib\bootstrap\dist\**" />
+    <None Remove="wwwroot\lib\bootstrap\dist\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\lib\bootstrap\LICENSE" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LubeSoft.Model\LubeSoft.Model.csproj" />
+    <ProjectReference Include="..\LubeSoft.Services\LubeSoft.Services.csproj" />
+  </ItemGroup>
+
+</Project>

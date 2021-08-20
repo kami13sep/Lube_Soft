@@ -1,0 +1,76 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "LubeSoft";
+}
+
+   
+
+<br />
+<br />
+
+<form method="get">
+    <div class="container bg-white">
+        <br />
+        <div class="row">
+            <div class=" col12">
+                <p class="fs-3 text-center">Search Vehicle</p>
+            </div>
+        </div>
+        <div class="row">
+           
+            <div class=" col12 text-center">
+                <div class="input-group mb-4">
+                    <span class="input-group-text" id="basic-addon1">Search</span>
+                    <input type="text" class="form-control" asp-for="SearchKeyword" placeholder="Enter Vehicle ID, VIN, Customer Name" aria-label="search" aria-describedby="basic-addon1">
+                    <button type="submit" class="btn-primary btn">Search</button>
+                
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="row">
+            <div class=" col12">
+                <table id="example" class="table nowrap" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Vehicle ID</th>
+                            <th>Customer Name</th>
+                            <th>Phone</th>
+                            <th>Vehicle Description</th>
+                            <th>VIN</th>
+                            <th>Last Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var item in Model.vehicleDetails)
+                        {
+                            <tr>
+                                <td>@item.Vehicle_Id</td>
+                                <td>@item.Customer_Name</td>
+                                <td>@item.Phone</td>
+                                <td>@item.Vehicle_Details</td>
+                                <td>@item.VIN</td>
+                                <td>@item.Service_Date</td>
+                            </tr>
+                        }
+                       
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+    </form>
+
+
+
+
+
+
+
+
