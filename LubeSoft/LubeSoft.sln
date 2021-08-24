@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LubeSoft", "LubeSoft.csproj", "{79A334FF-BC10-4C67-BCE8-ADA344602584}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LubeSoft", "LubeSoft.csproj", "{79A334FF-BC10-4C67-BCE8-ADA344602584}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LubeSoft.Model", "..\LubeSoft.Model\LubeSoft.Model.csproj", "{3923725E-723F-4597-8100-DE72ECA746CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LubeSoft.Model", "..\LubeSoft.Model\LubeSoft.Model.csproj", "{3923725E-723F-4597-8100-DE72ECA746CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LubeSoft.Services", "..\LubeSoft.Services\LubeSoft.Services.csproj", "{4EACD898-CB45-4756-9EB4-A5B1B2190F9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LubeSoft.Services", "..\LubeSoft.Services\LubeSoft.Services.csproj", "{4EACD898-CB45-4756-9EB4-A5B1B2190F9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnit", "..\XUnit\XUnit.csproj", "{A0441414-9607-4F87-B3C0-3261D0C4689B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{4EACD898-CB45-4756-9EB4-A5B1B2190F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EACD898-CB45-4756-9EB4-A5B1B2190F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EACD898-CB45-4756-9EB4-A5B1B2190F9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0441414-9607-4F87-B3C0-3261D0C4689B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0441414-9607-4F87-B3C0-3261D0C4689B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0441414-9607-4F87-B3C0-3261D0C4689B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0441414-9607-4F87-B3C0-3261D0C4689B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
