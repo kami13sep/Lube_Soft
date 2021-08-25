@@ -4,7 +4,7 @@
     ViewData["Title"] = "LubeSoft";
 }
 
-   
+
 
 <br />
 <br />
@@ -18,22 +18,22 @@
             </div>
         </div>
         <div class="row">
-           
+
             <div class=" col12 text-center">
                 <div class="input-group mb-4">
                     <span class="input-group-text" id="basic-addon1">Search</span>
                     <input type="text" class="form-control" asp-for="SearchKeyword" placeholder="Enter Vehicle ID, VIN, Customer Name" aria-label="search" aria-describedby="basic-addon1">
                     <button type="submit" class="btn-primary btn">Search</button>
-                
+
                 </div>
             </div>
-            
+
 
         </div>
 
         <div class="row">
             <div class=" col12">
-                <table id="Vehicles" class="table table-striped" style="width:100%">
+                <table id="Vehicles" class="table table-hover" style="width:100%">
                     <thead>
                         <tr>
                             <th>Vehicle ID</th>
@@ -48,23 +48,23 @@
 
                         @foreach (var item in Model.vehicleDetails)
                         {
-                            <tr>
-                            <td>
-                                <a asp-page="EditVehicle" asp-route-ID="@item.Id">
-                           
-                                    @item.Vehicle_Id
-                                </a>
-                            </td>
+                            <tr ID="@item.Id">
+                                <td>
+                                    @*<a asp-page="EditVehicle" asp-route-ID="@item.Id">*@
 
-                            <td>@item.Customer_Name</td>
-                            <td>@item.Phone</td>
-                            <td>@item.Vehicle_Details</td>
-                            <td>@item.VIN</td>
-                            <td>@item.Service_Date</td>
-                        </tr>
-                       
+                                    @item.Vehicle_Id
+                                    @*</a>*@
+                                </td>
+
+                                <td>@item.Customer_Name</td>
+                                <td>@item.Phone</td>
+                                <td>@item.Vehicle_Details</td>
+                                <td>@item.VIN</td>
+                                <td>@item.Service_Date</td>
+                            </tr>
+
                         }
-                       
+
                     </tbody>
 
                 </table>
@@ -72,5 +72,44 @@
         </div>
 
     </div>
-    </form>
+</form>
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var table = $('#Vehicles').DataTable({
+            "paging": false,
+            "ordering": false,
+            "info": false,
+            "searching": false,
+           
+        });
+
+
+
+
+
+        $('#Vehicles tbody').on('click', 'tr', function () {
+
+            var data = table.row(this).data();
+
+            window.location = "/EditVehicle?ID=" + data.DT_RowId;
+
+        });
+
+
+
+
+
+    });
+</script>
 
